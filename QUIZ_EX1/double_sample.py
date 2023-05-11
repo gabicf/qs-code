@@ -2,4 +2,4 @@ class DoubleSample:
 
     @staticmethod
     def double(n):
-        pass
+        return n ** 2
