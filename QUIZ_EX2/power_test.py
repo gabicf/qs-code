@@ -1,4 +1,5 @@
 import unittest
+from power_sample import PowerSample
 
 class PowerTest:
     def powerTest1(self):
