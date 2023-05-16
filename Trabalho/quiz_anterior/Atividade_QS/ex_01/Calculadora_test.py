@@ -7,8 +7,8 @@ class Calculadora_Test(unittest.TestCase):
     def test_soma1(self):
         self.assertEqual(Calculadora_Sample.somar(1,1),2)
 
-    # def test_soma2(self):
-    #     self.assertEqual(Calculadora_Sample.somar(4,5),9)
+    def test_soma2(self):
+        self.assertEqual(Calculadora_Sample.somar(4,5),9)
 
     # def test_soma3(self):
     #     self.assertEqual(Calculadora_Sample.somar(10,10),20)
