@@ -19,11 +19,11 @@ class Calculadora_Test(unittest.TestCase):
     def test_sub1(self):
         self.assertEqual(Calculadora_Sample.subtrair(1,1),0)
 
-    # def test_sub2(self):
-    #     self.assertEqual(Calculadora_Sample.subtrair(4,2),2)
+    def test_sub2(self):
+        self.assertEqual(Calculadora_Sample.subtrair(4,2),2)
 
-    # def test_sub3(self):
-    #     self.assertEqual(Calculadora_Sample.subtrair(15,3),12)
+    def test_sub3(self):
+        self.assertEqual(Calculadora_Sample.subtrair(15,3),12)
 
 
         
@@ -31,11 +31,11 @@ class Calculadora_Test(unittest.TestCase):
     def test_mult1(self):
         self.assertEqual(Calculadora_Sample.multiplicar(1,1),1)
 
-    # def test_mult2(self):
-    #     self.assertEqual(Calculadora_Sample.multiplicar(4,4),16)
+    def test_mult2(self):
+        self.assertEqual(Calculadora_Sample.multiplicar(4,4),16)
 
-    # def test_mult3(self):
-    #     self.assertEqual(Calculadora_Sample.multiplicar(10,10),100)
+    def test_mult3(self):
+        self.assertEqual(Calculadora_Sample.multiplicar(10,10),100)
         
 
 
@@ -44,9 +44,9 @@ class Calculadora_Test(unittest.TestCase):
     def test_div1(self):
         self.assertEqual(Calculadora_Sample.dividir(1,1),1)
 
-    # def test_div2(self):
-    #     self.assertEqual(Calculadora_Sample.dividir(1,0),0)
+    def test_div2(self):
+        self.assertEqual(Calculadora_Sample.dividir(1,0),"NÃO É POSSIVEL DIVIDIR POR ZERO")
 
-    # def test_div3(self):
-    #     self.assertEqual(Calculadora_Sample.dividir(10,5),2)
+    def test_div3(self):
+        self.assertEqual(Calculadora_Sample.dividir(10,5),2)
         
