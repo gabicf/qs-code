@@ -1,37 +1,15 @@
-class Empregado:
-    def __init__(self, primeiro_nome, sobrenome, cargo, salario, taxa_reajuste = 1.05):
-        self.primeiro_nome = primeiro_nome
-        self.sobrenome = sobrenome
-        self.cargo = cargo
-        self.salario = salario
-        self.taxa_reajuste = taxa_reajuste
+import unittest
+from empregado_sample import Empregado
 
-    def retornaPnome(self):
-        return self.primeiro_nome
-    
-    def retornasobrenome(self):
-        return self.sobrenome
+class Teste_Empregado(unittest.TestCase):
+    def test_calcular_reajuste(self):
+        empregado = Empregado('Caique', 'Antunes', 'Programador', 2000, 1.05)
+        self.assertEqual(empregado.calcular_reajuste(empregado.retornasalario()), 2100)
 
-    def retornacargo(self):
-        return self.cargo
+    def test_fullname(self):
+        empregado = Empregado('Caique', 'Antunes', 'Programador', 2000, 1.05)
+        self.assertEqual(empregado.gerar_nome_completo(empregado.retornaPnome(), empregado.retornasobrenome()), 'Caique Antunes')
 
-    def retornasalario(self):
-        return self.salario
-
-    def retornataxa_reajuste(self):
-        return self.taxa_reajuste
-
-    @staticmethod
-    def calcular_reajuste():
-        pass
-
-    def gerar_nome_completo():
-        pass
-
-    def validar_cargo():
-        pass
-
-
-# * calcular_reajuste, o qual irá exibir o novo salario do funcionario, baseado no salário atual e sua taxa de reajuste;
-# * gerar_nome_completo, que combinara seus ambos os nomes e exibir o nome completo do funcionário;
-# * validar_cargo, que deverá verificar se o cargo atual está dentro de uma lista de cargos implementados pela empresa (presidente, diretor, gerente, analista e auxiliar)
+    def test_valida_cargo(self):
+        empregado = Empregado('Caique', 'Antunes', 'Programador', 2000, 1.05)
+        self.assertEqual(empregado.validar_cargo(empregado.retornacargo()), 'Cargo Valido')
